@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dmecha2spec.github.io/BOIW/sitemap.xml

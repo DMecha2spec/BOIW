@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boise Local Business Directory</title>
+<meta name="description" content="Sample websites built for local Boise, Idaho small businesses — food trucks, barber shops, retail, and services.">
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #f7f5f2;
+    --card-bg: #ffffff;
+    --text: #201d1a;
+    --muted: #6b6560;
+    --accent: #b5501d;
+    --border: #e6e1da;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16130f;
+      --card-bg: #211d18;
+      --text: #f2ede6;
+      --muted: #a89f95;
+      --accent: #e08a4f;
+      --border: #34302a;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+  }
+  header {
+    text-align: center;
+    padding: 3rem 1.25rem 2rem;
+  }
+  header h1 {
+    margin: 0 0 0.5rem;
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+  }
+  header p {
+    margin: 0;
+    color: var(--muted);
+    max-width: 40rem;
+    margin: 0 auto;
+  }
+  main {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 0 1.25rem 4rem;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1rem;
+  }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.25rem 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    text-decoration: none;
+    color: var(--text);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .card:hover, .card:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  }
+  .card h2 {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+  .card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+  .card .visit {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent);
+  }
+  footer {
+    text-align: center;
+    padding: 2rem 1.25rem 3rem;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Boise Local Business Directory</h1>
+  <p>Sample websites built for local Boise, Idaho businesses. Tap any business below to view its site.</p>
+</header>
+<main>
+  <div class="grid">
+    <a class="card" href="adelitas-food-truck/"><h2>Adelitas Food Truck</h2><p>Boise, ID</p><span class="visit">Visit site →</span></a>
+    <a class="card" href="alterations-master/"><h2>Alterations Master</h2><p>Tailoring in Boise, ID</p><span class="visit">Visit site →</span></a>
+    <a class="card" href="azteca-taco-truck/"><h2>Azteca Taco Truck</h2><p>Boise, ID</p><span class="visit">Visit site →</span></a>
+    <a class="card" href="babylon-market/"><h2>Babylon Market</h2><p>Middle Eastern Grocery &amp; Bakery</p><span class="visit">Visit site →</span></a>
+    <a class="card" href="boise-futons/"><h2>Boise Futons</h2><p>Comfortable Furniture for Every Room</p><span class="visit">Visit site →</span></a>
+    <a class="card" href="dons-barber-shop/"><h2>Don's Barber Shop</h2><p>Boise, ID</p><span class="visit">Visit site →</span></a>
+    <a class="card" href="jam-session-record-shop/"><h2>Jam Session Record Shop</h2><p>Boise, ID</p><span class="visit">Visit site →</span></a>
+    <a class="card" href="kings-komix-kastle/"><h2>King's Komix Kastle</h2><p>Boise's Original Comic Shop Since 1973</p><span class="visit">Visit site →</span></a>
+    <a class="card" href="kodiak-taxidermy-studio/"><h2>Kodiak Taxidermy Studio</h2><p>Boise, ID</p><span class="visit">Visit site →</span></a>
+    <a class="card" href="marvs-framing-gallery/"><h2>Marv's Framing &amp; Gallery</h2><p>Boise, ID</p><span class="visit">Visit site →</span></a>
+    <a class="card" href="nails-spa-at-17th/"><h2>Nails &amp; Spa At 17th</h2><p>Boise, ID</p><span class="visit">Visit site →</span></a>
+    <a class="card" href="nifty-90s-antique-shop/"><h2>Nifty 90's Antique Shop</h2><p>Boise, ID</p><span class="visit">Visit site →</span></a>
+    <a class="card" href="south-orchard-barber-shop/"><h2>South Orchard Barber Shop</h2><p>Boise, ID</p><span class="visit">Visit site →</span></a>
+    <a class="card" href="taco-loco/"><h2>El Taco Loco</h2><p>Boise Mexican Street Food</p><span class="visit">Visit site →</span></a>
+    <a class="card" href="the-candy-shop-tattoo/"><h2>The Candy Shop</h2><p>Tattoo Studio — Boise, ID</p><span class="visit">Visit site →</span></a>
+    <a class="card" href="timberwolf-small-engine-repairs/"><h2>Timberwolf Small Engine Repairs</h2><p>Boise, ID</p><span class="visit">Visit site →</span></a>
+    <a class="card" href="tims-job-shop/"><h2>Tim's Job Shop</h2><p>Welding &amp; Fabrication, Boise ID</p><span class="visit">Visit site →</span></a>
+    <a class="card" href="vero-vape-hookah/"><h2>Vero Vape &amp; Hookah</h2><p>Boise, ID</p><span class="visit">Visit site →</span></a>
+  </div>
+</main>
+<footer>
+  <p>Boise Business Websites Directory</p>
+</footer>
+</body>
+</html>

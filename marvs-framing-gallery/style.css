@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap');
+
+:root {
+  --charcoal: #262626;
+  --gold: #B8860B;
+  --offwhite: #FAF7F2;
+  --line: #ddd6ca;
+  --radius: 4px;
+  --shadow: 0 16px 40px rgba(0,0,0,0.08);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Jost', sans-serif;
+  color: var(--charcoal);
+  background: var(--offwhite);
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+h1, h2, h3, .logo { font-family: 'Cormorant Garamond', serif; font-weight: 600; }
+
+a { text-decoration: none; color: inherit; }
+.wrap { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
+
+/* NAV - minimal, left logo / right links, thin gold underline on scroll-active */
+header {
+  background: var(--offwhite);
+  border-bottom: 1px solid var(--line);
+}
+nav.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 26px 32px;
+}
+.logo { font-size: 1.9rem; letter-spacing: 1px; }
+.logo em { font-style: normal; color: var(--gold); }
+.nav-links { display: flex; gap: 40px; font-size: 0.95rem; letter-spacing: 0.5px; text-transform: uppercase; }
+.nav-links a { padding-bottom: 6px; border-bottom: 1px solid transparent; }
+.nav-links a:hover, .nav-links a.active { border-color: var(--gold); color: var(--gold); }
+
+/* HERO - split screen, image block left, text right (asymmetric, no clip-path/diagonal) */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 520px;
+}
+.hero-visual {
+  background: var(--charcoal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.frame-mock {
+  width: 70%;
+  aspect-ratio: 4/5;
+  border: 14px solid var(--gold);
+  background: #3a3a3a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: var(--offwhite);
+  box-shadow: var(--shadow);
+}
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px;
+}
+.hero-content .eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.8rem;
+  color: var(--gold);
+  margin-bottom: 18px;
+}
+.hero-content h1 { font-size: 3.2rem; line-height: 1.15; margin-bottom: 22px; }
+.hero-content p { max-width: 420px; margin-bottom: 30px; color: #5a5a5a; }
+
+.btn {
+  display: inline-block;
+  border: 1px solid var(--charcoal);
+  color: var(--charcoal);
+  padding: 14px 32px;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.25s ease;
+}
+.btn:hover { background: var(--charcoal); color: var(--offwhite); }
+.btn.gold { border-color: var(--gold); color: var(--gold); }
+.btn.gold:hover { background: var(--gold); color: #fff; }
+
+section { padding: 90px 0; }
+.section-title { font-size: 2.6rem; text-align: center; margin-bottom: 16px; }
+.section-sub { text-align: center; max-width: 540px; margin: 0 auto 60px; color: #6a6a6a; }
+
+/* Services - minimal bordered columns, not cards with shadow */
+.services-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+.service-col {
+  padding: 40px 34px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.service-col .index { font-family: 'Cormorant Garamond'; font-size: 1.1rem; color: var(--gold); margin-bottom: 12px; }
+.service-col h3 { font-size: 1.4rem; margin-bottom: 10px; }
+.service-col p { color: #6a6a6a; font-size: 0.95rem; }
+
+.quote-block {
+  background: var(--charcoal);
+  color: var(--offwhite);
+  text-align: center;
+}
+.quote-block blockquote {
+  font-family: 'Cormorant Garamond';
+  font-size: 2rem;
+  font-style: italic;
+  max-width: 700px;
+  margin: 0 auto 20px;
+  line-height: 1.5;
+}
+.quote-block cite { color: var(--gold); font-style: normal; letter-spacing: 1px; }
+
+footer {
+  background: var(--offwhite);
+  border-top: 1px solid var(--line);
+  padding: 60px 0 26px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+.footer-grid h4 { font-size: 1.3rem; margin-bottom: 14px; }
+.footer-grid p { color: #6a6a6a; font-size: 0.92rem; }
+.social-row { display: flex; gap: 14px; margin-top: 14px; }
+.social-row a {
+  width: 36px; height: 36px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.85rem;
+}
+.social-row a:hover { border-color: var(--gold); color: var(--gold); }
+.copyright {
+  text-align: center;
+  border-top: 1px solid var(--line);
+  padding-top: 22px;
+  font-size: 0.82rem;
+  color: #999;
+}
+
+/* GALLERY PAGE */
+.page-hero {
+  background: var(--charcoal);
+  color: var(--offwhite);
+  text-align: center;
+  padding: 70px 0;
+}
+.page-hero h1 { font-size: 2.8rem; }
+.page-hero p { color: #c9c3b8; margin-top: 10px; }
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+.gallery-item {
+  background: var(--charcoal);
+  aspect-ratio: 1/1;
+  border: 8px solid var(--offwhite);
+  outline: 2px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  font-size: 2rem;
+  box-shadow: var(--shadow);
+}
+.gallery-caption { text-align: center; margin-top: 12px; font-size: 0.9rem; color: #6a6a6a; }
+.gallery-cell { display: flex; flex-direction: column; }
+
+/* CONTACT PAGE */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+.info-block h3 { font-size: 1.5rem; margin-bottom: 14px; color: var(--gold); }
+.info-block p { margin-bottom: 10px; }
+.map-block {
+  background: var(--charcoal);
+  color: var(--offwhite);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 260px;
+  text-align: center;
+  padding: 20px;
+  font-family: 'Cormorant Garamond';
+  font-size: 1.2rem;
+}
+
+@media (max-width: 850px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero-visual { min-height: 300px; }
+  .services-row { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .hero-content h1 { font-size: 2.3rem; }
+}

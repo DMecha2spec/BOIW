@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&display=swap');
+
+:root {
+  --purple: #3B1F4E;
+  --orange: #E8792B;
+  --mustard: #F2C14E;
+  --paper: #FBF6EA;
+  --ink: #1F1425;
+  --shadow: 0 14px 32px rgba(31, 20, 37, 0.22);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Archivo', sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.6;
+}
+
+h1, h2, h3, .logo { font-family: 'Anton', sans-serif; font-weight: 400; letter-spacing: 0.5px; }
+a { text-decoration: none; color: inherit; }
+.wrap { max-width: 1150px; margin: 0 auto; padding: 0 26px; }
+
+/* NAV */
+header {
+  background: var(--paper);
+  border-bottom: 3px solid var(--ink);
+}
+nav.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 26px;
+}
+.logo { font-size: 1.9rem; color: var(--purple); text-transform: uppercase; }
+.logo span { color: var(--orange); }
+.nav-links { display: flex; gap: 28px; font-weight: 700; text-transform: uppercase; font-size: 0.9rem; }
+.nav-links a { padding: 6px 14px; border-radius: 100px; }
+.nav-links a:hover, .nav-links a.active { background: var(--mustard); }
+
+/* HERO - poster style with spinning record graphic (distinct from all previous heroes) */
+.hero {
+  background: var(--purple);
+  color: var(--paper);
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+.hero .wrap {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+.hero-text { flex: 1 1 440px; }
+.hero h1 {
+  font-size: 3.6rem;
+  line-height: 1.05;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.hero h1 .hl { color: var(--mustard); }
+.hero p { max-width: 460px; color: #d9cbe0; margin-bottom: 30px; font-size: 1.1rem; }
+
+.vinyl {
+  flex: 0 0 auto;
+  width: 260px; height: 260px;
+  border-radius: 50%;
+  background: repeating-radial-gradient(circle, #17101c 0 4px, #241730 4px 8px);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: var(--shadow);
+  border: 6px solid var(--mustard);
+}
+.vinyl .label {
+  width: 90px; height: 90px;
+  border-radius: 50%;
+  background: var(--orange);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.8rem;
+  border: 4px solid var(--paper);
+}
+
+.btn {
+  display: inline-block;
+  background: var(--mustard);
+  color: var(--ink);
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 15px 32px;
+  border-radius: 6px;
+  box-shadow: var(--shadow);
+}
+.btn:hover { background: var(--orange); color: #fff; }
+.btn.purple { background: var(--purple); color: var(--paper); }
+
+section { padding: 80px 0; }
+.section-title { text-align: center; font-size: 2.4rem; text-transform: uppercase; color: var(--purple); margin-bottom: 14px; }
+.section-sub { text-align: center; max-width: 540px; margin: 0 auto 50px; color: #6b5f75; }
+
+/* Genre tiles - each a different accent color, distinct pattern from chip-grid/services-row elsewhere */
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.tile {
+  aspect-ratio: 1/1;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  box-shadow: var(--shadow);
+  gap: 10px;
+}
+.tile .emoji { font-size: 2rem; }
+.tile:nth-child(4n+1) { background: var(--purple); }
+.tile:nth-child(4n+2) { background: var(--orange); }
+.tile:nth-child(4n+3) { background: #2E7D6E; }
+.tile:nth-child(4n+4) { background: #B5443C; }
+
+.story {
+  background: var(--ink);
+  color: var(--paper);
+}
+.story .wrap { display: flex; gap: 40px; align-items: center; flex-wrap: wrap; }
+.story-text { flex: 1 1 420px; }
+.story h2 { color: var(--mustard); text-transform: uppercase; }
+.story-badges { flex: 1 1 260px; display: flex; flex-wrap: wrap; gap: 14px; }
+.badge {
+  background: var(--purple);
+  padding: 10px 18px;
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+footer {
+  background: var(--purple);
+  color: #d9cbe0;
+  padding: 50px 0 24px;
+}
+.footer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-bottom: 30px; }
+.footer-grid h4 { color: var(--mustard); text-transform: uppercase; margin-bottom: 12px; font-family: 'Anton'; font-weight: 400; }
+.social-row { display: flex; gap: 14px; margin-top: 10px; }
+.social-row a { width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; }
+.social-row a:hover { background: var(--orange); }
+.copyright { text-align: center; border-top: 1px solid rgba(255,255,255,0.15); padding-top: 20px; font-size: 0.82rem; color: #b5a3c2; }
+
+/* GENRES PAGE */
+.page-hero { background: var(--orange); color: #fff; text-align: center; padding: 60px 0; }
+.page-hero h1 { font-size: 2.6rem; text-transform: uppercase; }
+
+.staff-pick-row {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.staff-pick {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #fff;
+  border: 3px solid var(--ink);
+  border-radius: 10px;
+  padding: 18px 24px;
+}
+.staff-pick .disc {
+  width: 54px; height: 54px; border-radius: 50%;
+  background: var(--purple);
+  flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--mustard);
+}
+.staff-pick h3 { font-size: 1.1rem; text-transform: none; font-family: 'Archivo'; font-weight: 700; }
+.staff-pick p { font-size: 0.9rem; color: #6b5f75; }
+
+/* CONTACT PAGE */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+.info-card { background: #fff; border: 3px solid var(--ink); border-radius: 10px; padding: 30px; }
+.info-card h3 { color: var(--purple); margin-bottom: 14px; text-transform: uppercase; }
+.info-card p { margin-bottom: 8px; }
+.map-block {
+  background: var(--purple); color: var(--paper);
+  border-radius: 10px; display: flex; align-items: center; justify-content: center;
+  min-height: 220px; text-align: center; padding: 20px; font-weight: 700; text-transform: uppercase;
+}
+
+@media (max-width: 850px) {
+  .tile-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 2.4rem; }
+  .vinyl { width: 180px; height: 180px; }
+}
