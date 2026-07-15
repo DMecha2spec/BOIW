@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Boise Local Business Directory</title>
 <meta name="description" content="Sample websites built for local Boise, Idaho small businesses — food trucks, barber shops, retail, and services.">
+<meta name="robots" content="noindex, nofollow">
 <style>
   :root {
     color-scheme: light dark;
@@ -94,9 +95,74 @@
     color: var(--muted);
     font-size: 0.85rem;
   }
+  #lock-screen {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem;
+  }
+  #lock-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem 1.75rem;
+    max-width: 22rem;
+    width: 100%;
+    text-align: center;
+  }
+  #lock-box h1 {
+    font-size: 1.3rem;
+    margin: 0 0 0.5rem;
+  }
+  #lock-box p {
+    color: var(--muted);
+    margin: 0 0 1.25rem;
+    font-size: 0.9rem;
+  }
+  #lock-box input[type="password"] {
+    width: 100%;
+    padding: 0.65rem 0.8rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+    background: var(--bg);
+    color: var(--text);
+  }
+  #lock-box button {
+    width: 100%;
+    padding: 0.65rem 0.8rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    background: var(--accent);
+    color: #fff;
+    cursor: pointer;
+  }
+  #lock-error {
+    color: var(--accent);
+    font-size: 0.85rem;
+    margin-top: 0.6rem;
+    display: none;
+  }
+  #site-content {
+    display: none;
+  }
 </style>
 </head>
 <body>
+<div id="lock-screen">
+  <div id="lock-box">
+    <h1>Boise Local Business Directory</h1>
+    <p>This site is private. Enter the passcode to continue.</p>
+    <input type="password" id="passcode-input" placeholder="Passcode" autocomplete="off">
+    <button id="passcode-submit">Enter</button>
+    <p id="lock-error">Incorrect passcode. Try again.</p>
+  </div>
+</div>
+<div id="site-content">
 <header>
   <h1>Boise Local Business Directory</h1>
   <p>Sample websites built for local Boise, Idaho businesses. Tap any business below to view its site.</p>
@@ -126,5 +192,37 @@
 <footer>
   <p>Boise Business Websites Directory</p>
 </footer>
+</div>
+<script>
+  var PASSCODE = "boise2026";
+  var lockScreen = document.getElementById("lock-screen");
+  var siteContent = document.getElementById("site-content");
+  var input = document.getElementById("passcode-input");
+  var error = document.getElementById("lock-error");
+
+  function unlock() {
+    lockScreen.style.display = "none";
+    siteContent.style.display = "block";
+    sessionStorage.setItem("boiw-unlocked", "yes");
+  }
+
+  if (window.location.protocol === "file:" || sessionStorage.getItem("boiw-unlocked") === "yes") {
+    unlock();
+  }
+
+  document.getElementById("passcode-submit").addEventListener("click", function () {
+    if (input.value === PASSCODE) {
+      unlock();
+    } else {
+      error.style.display = "block";
+    }
+  });
+
+  input.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") {
+      document.getElementById("passcode-submit").click();
+    }
+  });
+</script>
 </body>
 </html>
