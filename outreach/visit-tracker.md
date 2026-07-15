@@ -11,6 +11,7 @@ Status options: `Not visited` / `Interested` / `Maybe - follow up` / `Not intere
 | Azteca Taco Truck | | | | | Not visited |
 | Babylon Market | | | | | Not visited |
 | Boise Futons | | | | | Not visited |
+| Classy Nails | | | | | Not visited |
 | Don's Barber Shop | | | | | Not visited |
 | Jam Session Record Shop | | | | | Not visited |
 | King's Komix Kastle | | | | | Not visited |
@@ -24,3 +25,4 @@ Status options: `Not visited` / `Interested` / `Maybe - follow up` / `Not intere
 | Timberwolf Small Engine Repairs | | | | | Not visited |
 | Tim's Job Shop | | | | | Not visited |
 | Vero Vape & Hookah | | | | | Not visited |
+| Vietfood | | | | | Not visited |

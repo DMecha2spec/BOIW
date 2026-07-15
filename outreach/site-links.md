@@ -1,6 +1,6 @@
 # Site Links & Passcode
 
-**Note:** These links go live tomorrow after we push to GitHub and finish enabling Pages. Until then, the sites only work by double-clicking the files on your computer.
+**Note:** The site is live — all links below work now.
 
 **Passcode for the directory page:** `boise2026`
 (Only the main directory page asks for this. Individual business pages below open directly.)
@@ -14,6 +14,7 @@
 | Azteca Taco Truck | https://dmecha2spec.github.io/BOIW/azteca-taco-truck/ |
 | Babylon Market | https://dmecha2spec.github.io/BOIW/babylon-market/ |
 | Boise Futons | https://dmecha2spec.github.io/BOIW/boise-futons/ |
+| Classy Nails | https://dmecha2spec.github.io/BOIW/classy-nails/ |
 | Don's Barber Shop | https://dmecha2spec.github.io/BOIW/dons-barber-shop/ |
 | Jam Session Record Shop | https://dmecha2spec.github.io/BOIW/jam-session-record-shop/ |
 | King's Komix Kastle | https://dmecha2spec.github.io/BOIW/kings-komix-kastle/ |
@@ -27,3 +28,4 @@
 | Timberwolf Small Engine Repairs | https://dmecha2spec.github.io/BOIW/timberwolf-small-engine-repairs/ |
 | Tim's Job Shop | https://dmecha2spec.github.io/BOIW/tims-job-shop/ |
 | Vero Vape & Hookah | https://dmecha2spec.github.io/BOIW/vero-vape-hookah/ |
+| Vietfood | https://dmecha2spec.github.io/BOIW/vietfood-cuisine/ |
